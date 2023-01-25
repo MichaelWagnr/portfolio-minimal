@@ -17,6 +17,7 @@ const Container = styled.header`
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	padding-right: 20px;
 `
 
 const PageLinks = styled.div`

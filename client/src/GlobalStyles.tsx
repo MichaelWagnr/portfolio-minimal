@@ -23,15 +23,16 @@ export default createGlobalStyle`
   --accent-900: #7aa2f7;
   --accent-1000: #bb9af7;
 
-  --h1: 3.052rem;  
-  --h2: 2.441rem;
-  --h3: 1.953rem;
-  --h4: 1.563rem;
-  --h5: 1.25rem;
+  /* Type-Scale: Perfect Fourth */
+  --h1: 4.209rem;  
+  --h2: 3.157rem;
+  --h3: 2.369rem;
+  --h4: 1.777rem;
+  --h5: 1.333rem;
   --p: 1rem;  
-  --h6: 0.8rem;  
-  --h7: 0.64rem;  
-  --h8: 0.512rem;  
+  --h6: 0.75rem;  
+  --h7: 0.563rem;  
+  --h8: 0.422rem;  
 }
 
 html {
