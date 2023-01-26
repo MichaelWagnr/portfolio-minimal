@@ -10,7 +10,11 @@ function Main() {
 }
 
 const Container = styled.main`
-	padding-top: 100px;
+	padding-top: calc(70vh / 2);
+	padding-left: 10px;
+	position: absolute;
+	top: 0;
+	height: 100vh;
 `
 
 export default Main
