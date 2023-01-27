@@ -10,7 +10,7 @@ function Main() {
 }
 
 const Container = styled.main`
-	padding-top: calc(70vh / 2);
+	padding-top: calc(50vh - 177.88px);
 	padding-left: 10px;
 	position: absolute;
 	top: 0;

@@ -20,10 +20,10 @@ const Container = styled.div`
 		right: 3px;
 		top: 9px;
 
-		animation-name: title;
+		/* animation-name: title;
 		animation-duration: 0.5s;
 		animation-timing-function: ease-in;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards; */
 	}
 
 	h2 {
@@ -39,7 +39,7 @@ const Container = styled.div`
 		}
 
 		animation-name: subtitle;
-		animation-duration: 0.75s;
+		animation-duration: 1s;
 		animation-timing-function: ease-in;
 		animation-fill-mode: forwards;
 	}
@@ -57,12 +57,12 @@ const Container = styled.div`
 	@keyframes subtitle {
 		0% {
 			color: var(--primary-fg-300);
-			opacity: 0;
+			/* opacity: 0; */
 		}
 
 		50% {
 			color: var(--primary-fg-300);
-			opacity: 1;
+			/* opacity: 1; */
 		}
 
 		99% {
@@ -79,7 +79,7 @@ const Logo = styled.img`
 	position: absolute;
 	z-index: -1;
 	animation-name: logo;
-	animation-duration: 0.75s;
+	animation-duration: 1s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: forwards;
 
