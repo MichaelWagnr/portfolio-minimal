@@ -12,11 +12,12 @@ function Main() {
 }
 
 const Container = styled.main`
-	padding-top: calc(50vh - 170px);
+	padding-top: calc(50vh - 260px);
 	padding-left: 10px;
-	position: absolute;
 	top: 0;
-	height: 100vh;
+	height: calc(100vh - 100px);
+	max-width: 1200px;
+	margin: auto;
 `
 
 export default Main

@@ -18,6 +18,8 @@ const Container = styled.header`
 	align-items: center;
 	justify-content: flex-end;
 	padding-right: 20px;
+	max-width: 1200px;
+	margin: auto;
 `
 
 const PageLinks = styled.div`

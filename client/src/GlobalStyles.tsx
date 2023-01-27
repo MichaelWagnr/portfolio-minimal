@@ -11,6 +11,7 @@ export default createGlobalStyle`
   --primary-bg-200: #414868;  
   --primary-bg-300: #24283b;  
   --primary-bg-400: #1a1b26;
+  --primary-bg-500: #0f0f14;
 
   --accent-100: #f7768e;
   --accent-200: #ff9e64;
@@ -91,8 +92,6 @@ body {
   color: var(--primary-fg-100);
   background: var(--primary-bg-400);
 	min-height: 100vh;
-	max-width: 1200px;
-  margin: auto;
 }
 
 h1 {font-size: var(--h1);}
