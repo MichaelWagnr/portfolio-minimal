@@ -15,7 +15,8 @@ const Container = styled.main`
 	padding-top: calc(50vh - 260px);
 	padding-left: 10px;
 	top: 0;
-	height: calc(100vh - 100px);
+	/* height: calc(100vh - 100px); */
+	height: calc(60vh - 100px);
 	max-width: 1200px;
 	margin: auto;
 `
