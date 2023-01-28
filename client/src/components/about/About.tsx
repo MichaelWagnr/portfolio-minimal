@@ -1,23 +1,30 @@
 import styled from 'styled-components'
 import bg from '../../../public/scuffed.jpg'
 import Icon from './Icon'
+import Icons from './Icons'
 
 function About() {
 	return (
 		<Background>
 			<Container>
-				<Icon
-					color="var(--primary-fg-100)"
-					text="TYPESCRIPT"
-					textRotation="36"
-				/>
+				{Icons.map((icon) => (
+					<Icon
+						key={icon.text}
+						color={icon.color}
+						text={icon.text}
+						textRotation={icon.textRotation}
+						svg={icon.svg}
+						svg2={icon?.svg2}
+						svg3={icon?.svg3}
+					/>
+				))}
 			</Container>
 		</Background>
 	)
 }
 
 const Background = styled.section`
-	height: 100vh;
+	height: 130vh;
 	width: 100vw;
 	background: linear-gradient(rgb(26, 27, 38, 1), rgba(0, 0, 0, 0.4)),
 		url(${bg});
