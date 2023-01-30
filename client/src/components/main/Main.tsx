@@ -12,11 +12,12 @@ function Main() {
 }
 
 const Container = styled.main`
-	padding-top: calc(50vh - 260px);
 	padding-left: 10px;
-	top: 0;
-	/* height: calc(100vh - 100px); */
+	min-height: 200px;
 	height: calc(60vh - 100px);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 	max-width: 1200px;
 	margin: auto;
 `

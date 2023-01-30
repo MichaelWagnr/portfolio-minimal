@@ -12,6 +12,8 @@ export default createGlobalStyle`
   --primary-bg-300: #24283b;  
   --primary-bg-400: #1a1b26;
   --primary-bg-500: #0f0f14;
+  --primary-bg-600: #0c0c0e;
+  --primary-bg-700: #030303;
 
   --accent-100: #f7768e;
   --accent-200: #ff9e64;
@@ -34,6 +36,8 @@ export default createGlobalStyle`
   --h6: 0.75rem;  
   --h7: 0.563rem;  
   --h8: 0.422rem;  
+
+  /* scroll-behavior: smooth; */
 }
 
 html {

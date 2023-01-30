@@ -1,13 +1,19 @@
 import About from './components/about/About'
-import Header from './components/Header'
+import Contact from './components/contact/Contact'
+import Header from './components/header/Header'
 import Main from './components/main/Main'
+import Projects from './components/projects/Projects'
+import Tech from './components/tech/Tech'
 
 function App() {
 	return (
 		<>
 			<Header />
 			<Main />
+			<Tech />
 			<About />
+			<Projects />
+			<Contact />
 		</>
 	)
 }

@@ -33,6 +33,7 @@ const Container = styled.div`
 			font-style: italic;
 			bottom: 50px;
 			left: 13px;
+			letter-spacing: 1.5px;
 		}
 
 		animation-name: subtitle;
@@ -71,7 +72,7 @@ const Logo = styled.img`
 			opacity: 0;
 			bottom: 22px;
 			right: -9px;
-			rotate: 180deg;
+			rotate: 360deg;
 		}
 
 		to {
