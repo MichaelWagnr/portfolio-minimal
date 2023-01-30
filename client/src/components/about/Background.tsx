@@ -6,42 +6,54 @@ function Story() {
 			<Heading>
 				<h2>Background</h2>
 				<h3>
-					<span className="a">How I got into programming </span>
+					<span className="a">
+						How I got into programming - <Summary>TL</Summary>
+						<Tech>DR</Tech>
+					</span>
 				</h3>
 			</Heading>
+
 			<p>
-				When I was a child, my father took us to a science exhibit at the
-				University of Saskatchewan, where we won an internet router in a raffle
-				contest - becoming one of the first families on the block to be online.
+				From an early age I had an interest in computers and technology. My
+				father took me to a science exhibit at the University of Saskatchewan,
+				where we won an internet router in a raffle contest - becoming one of
+				the only families on the block to be online. It was quite a few years
+				after that experience that I was first introduced to writing code and
+				programming:
 			</p>
 			<p>
-				I spent a great portion of my formative years either glued to a computer
-				or practicing guitar. The later of which led me to move from the
-				Vancouver area to Edmonton Alberta after high school.
+				<Summary>In my early 20s, </Summary>I worked as a Manager for a company
+				that had two Python Developers. Their monitors were always a colorful
+				splay of highlighted text and I greatly admired their work.{' '}
+				<Summary>I began learning </Summary>
+				<Tech>SQL</Tech> with the aim of writing database queries for my peers
+				and beginning to code.
 			</p>
 			<p>
-				I later worked as a Manager for a company that had two Python
-				developers. Their monitors were always a colorful splay of highlighted
-				text. I greatly admired their work and started learning <Tech>SQL</Tech>{' '}
-				with the aim of writing database queries for my peers in order to get
-				involved in coding.
-			</p>
-			<p>
-				I made a bit of progress and turned my interest towards{' '}
+				<Summary>
+					I made a bit of progress and turned my interest towards{' '}
+				</Summary>
 				<Tech>Python</Tech> which proved to be a pretty big leap. I put aside
-				coding, moved to Montréal and focused my efforts on learning French and
-				how to play the piano. The challenge of thinking in another language,
+				coding, and moved to Montréal where I focused my efforts on learning
+				French and playing piano. The challenge of thinking in another language,
 				and translating dots on a page into musical performance gave me the
-				practice in abstract thinking necessary to attempt programming again.
+				practice in abstract thinking and confidence boost necessary to attempt
+				programming again.
 			</p>
 			<p>
-				After having a false start, I decided to begin with something less
-				intimidating - <Tech>HTML</Tech> and <Tech>CSS</Tech>.
+				<Summary>After having a false start, I decided to start with </Summary>
+				something less intimidating: <Tech>HTML</Tech>
+				<Summary> and</Summary> <Tech>CSS</Tech>. The momentum was starting to
+				pick up.
 			</p>
 			<p>
-				After that I started converting projects to <Tech>TypeScript</Tech>{' '}
-				which proved to be a fun challenge
+				<Summary>The </Summary>logical <Summary>next step was</Summary> to try
+				<Summary> learning </Summary>
+				<Tech>JavaScript</Tech>. I was discovering a new technology, but with
+				the benefit of having previously studied loops, if/else clauses and
+				functions in Python. A surprise bonus!
 			</p>
+			<p></p>
 		</Container>
 	)
 }
@@ -82,6 +94,10 @@ const Heading = styled.div`
 `
 
 const Tech = styled.span`
+	color: var(--accent-100);
+`
+
+const Summary = styled.span`
 	color: var(--accent-300);
 `
 
