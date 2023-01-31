@@ -47,13 +47,38 @@ function Story() {
 				pick up.
 			</p>
 			<p>
-				<Summary>The </Summary>logical <Summary>next step was</Summary> to try
-				<Summary> learning </Summary>
+				<Summary>The next step was learning </Summary>
 				<Tech>JavaScript</Tech>. I was discovering a new technology, but with
 				the benefit of having previously studied loops, if/else clauses and
-				functions in Python. A surprise bonus!
+				functions in Python. A great surprise!
 			</p>
-			<p></p>
+			<p>
+				I was greatly inspired by one of my friends who had taught themself Web
+				Development and was able to enter the field on the basis of their own
+				efforts; So <Summary>I started to double down on my studies</Summary>,
+				consuming a number of online courses and textbooks. I was comfortable
+				making <Tech>React</Tech> applications on my own, but my readiness to
+				start applying for Developer positions was unmeasured. I decided to
+				enroll in a University program to accelerate my path towards entering
+				the market.
+			</p>
+			<p>
+				<Summary>
+					I began a Full Stack Web Development program through Concordia
+					University
+				</Summary>
+				. I gave it my best effort and made some great friends in the process.
+				The curriculum helped me close gaps in my skillset, especially with{' '}
+				<Tech>Node.js</Tech> and <Tech>MongoDB</Tech>. Eager to take in as much
+				information as possible, I found time outside of class projects to learn{' '}
+				<Tech>TypeScript</Tech> and follow a course on using Regular Expressions
+				and Git.{' '}
+				<Summary>
+					I graduated in December of 2022, and have continued learning and
+					building projects since
+				</Summary>
+				.
+			</p>
 		</Container>
 	)
 }

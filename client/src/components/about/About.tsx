@@ -15,7 +15,7 @@ function About() {
 
 const Background = styled.section`
 	/* margin-top: -110px; */
-	height: 100vh;
+	height: fit-content;
 	width: 100vw;
 	background: var(--primary-bg-700);
 	border-top: 1px solid var(--primary-fg-300);
