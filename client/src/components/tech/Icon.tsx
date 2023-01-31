@@ -5,15 +5,17 @@ type Props = {
 	text: string
 	textRotation: string
 	svg: string[]
+	fill?: boolean
 }
 
-const SIZE = '150px'
+const SMALL = '55px'
+const LARGE = '150px'
 
-function Icon({ color, text, textRotation, svg }: Props) {
+function Icon({ color, text, textRotation, svg, fill }: Props) {
 	return (
 		<SVG
-			width="200"
-			height="200"
+			width={fill ? SMALL : LARGE}
+			height={fill ? SMALL : LARGE}
 			viewBox="0 -50 200 250"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg">
@@ -74,25 +76,31 @@ function Icon({ color, text, textRotation, svg }: Props) {
 				</filter>
 			</defs>
 
-			<text dx={textRotation}>
-				<textPath xlinkHref="#textcurve" fill={color}>
-					{text}
-				</textPath>
-			</text>
+			{fill ? null : (
+				<>
+					<text dx={textRotation}>
+						<textPath xlinkHref="#textcurve" fill={color}>
+							{text}
+						</textPath>
+					</text>
 
-			<circle cx="100" cy="100" r="78.8889" stroke={color} />
+					<circle cx="100" cy="100" r="78.8889" stroke={color} />
+				</>
+			)}
 
 			{svg.map((path, index) => (
-				<path d={path} key={index} stroke={color} />
+				<path
+					d={path}
+					key={index}
+					stroke={fill ? 'black' : color}
+					fill={fill ? color : ''}
+				/>
 			))}
 		</SVG>
 	)
 }
 
 const SVG = styled.svg`
-	width: ${SIZE};
-	height: ${SIZE};
-
 	text {
 		/* font-size: 1.4rem; */
 		font-size: 1.06rem;
