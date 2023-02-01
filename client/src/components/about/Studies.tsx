@@ -93,7 +93,10 @@ const Heading = styled.div`
 `
 
 const Lists = styled.div`
-	padding-left: 40px;
+	/* padding-left: 40px; */
+	display: grid;
+	justify-content: center;
+
 	li {
 		list-style: inside;
 	}
