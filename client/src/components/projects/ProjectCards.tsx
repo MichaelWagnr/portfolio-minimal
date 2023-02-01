@@ -23,6 +23,14 @@ const Container = styled.div`
 	border: 1px solid var(--accent-900);
 	border-radius: 5px;
 	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	transition: transform 1s;
+
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.05);
+	}
 `
 
 export default ProjectCards

@@ -18,9 +18,12 @@ function Projects() {
 			<Container>
 				<h2>Projects</h2>
 				<ProjectDetails project={currentlyViewed} />
-				{unselectedProjects.map((project) => (
-					<ProjectCards project={project} />
-				))}
+				<h4>click to view</h4>
+				<CardContainer>
+					{unselectedProjects.map((project) => (
+						<ProjectCards key={project.name} project={project} />
+					))}
+				</CardContainer>
 			</Container>
 		</Background>
 	)
@@ -28,6 +31,7 @@ function Projects() {
 
 const Background = styled.section`
 	min-height: fit-content;
+	padding-bottom: 20px;
 	width: 100vw;
 	background: var(--primary-bg-600);
 	background: linear-gradient(var(--primary-bg-700), var(--primary-bg-400));
@@ -41,10 +45,23 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	h2 {
+	h2,
+	h4 {
 		color: var(--primary-fg-300);
 		text-align: center;
+		margin-bottom: 40px;
 	}
+
+	h4 {
+		margin: 20px;
+	}
+`
+
+const CardContainer = styled.div`
+	display: flex;
+	overflow-x: scroll;
+	gap: 10px;
+	padding: 10px;
 `
 
 export default Projects

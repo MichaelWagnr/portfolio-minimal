@@ -15,6 +15,7 @@ function ProjectDetails({ project }: Props) {
 	return (
 		<Container>
 			<ProjectHeader name={project.name} icons={projectIcons} />
+			<MainImg src={project.data.mainImgSrc} alt={project.data.mainImgAlt} />
 		</Container>
 	)
 }
@@ -22,8 +23,14 @@ function ProjectDetails({ project }: Props) {
 const Container = styled.div`
 	border: 1px solid var(--accent-900);
 	border-radius: 5px;
-	overflow: hidden;
+	overflow-x: hidden;
 	min-height: fit-content;
+`
+
+const MainImg = styled.img`
+	border-radius: 5px;
+	width: 98%;
+	margin: 1% 1%;
 `
 
 export default ProjectDetails
