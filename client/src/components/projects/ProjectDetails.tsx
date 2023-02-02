@@ -24,6 +24,7 @@ function ProjectDetails({ project }: Props) {
 					<Heading>Description</Heading>
 					<p>{project.data.description}</p>
 				</div>
+
 				<div>
 					<Heading>Links</Heading>
 					<LinkContainer>
@@ -38,7 +39,13 @@ function ProjectDetails({ project }: Props) {
 						</Link>
 					</LinkContainer>
 				</div>
-				<div></div>
+
+				<div>
+					<Heading>Story</Heading>
+					{project.data.story.map((paragraph, index) => (
+						<p key={index}>{paragraph}</p>
+					))}
+				</div>
 				<div></div>
 			</ContentGrid>
 		</Container>
@@ -60,16 +67,21 @@ const MainImg = styled.img`
 
 const ContentGrid = styled.div`
 	display: grid;
-	gap: 40px;
-	grid-template-columns: 1fr max-content;
+	row-gap: 20px;
+	column-gap: 40px;
+	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 1fr max-content;
-	padding: 50px;
+	padding: 20px 50px 50px;
+
+	p {
+		text-indent: 20px;
+	}
 `
 
-const Heading = styled.p`
+const Heading = styled.h5`
 	/* font-weight: lighter; */
 	margin-bottom: 20px;
-	color: var(--accent-400);
+	color: var(--accent-900);
 `
 
 const LinkContainer = styled.div`

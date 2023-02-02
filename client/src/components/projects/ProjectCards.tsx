@@ -15,6 +15,10 @@ function ProjectCards({ project }: Props) {
 	return (
 		<Container>
 			<ProjectHeader name={project.name} icons={projectIcons} />
+			<Description>
+				<Heading>Description</Heading>
+				<p>{project.data.description}</p>
+			</Description>
 		</Container>
 	)
 }
@@ -25,12 +29,25 @@ const Container = styled.div`
 	overflow: hidden;
 	width: 300px;
 	height: 300px;
-	transition: transform 1s;
+	transition: all 0.4s;
 
 	&:hover {
 		cursor: pointer;
-		transform: scale(1.05);
+		transform: scale(1.015) translateY(-2px);
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 30px;
 	}
+`
+
+const Description = styled.div`
+	width: fit-content;
+	padding: 20px;
+`
+
+const Heading = styled.h5`
+	/* font-weight: lighter; */
+	font-size: var(--p);
+	margin-bottom: 10px;
+	color: var(--accent-900);
 `
 
 export default ProjectCards
