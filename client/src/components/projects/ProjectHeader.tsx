@@ -15,9 +15,8 @@ function ProjectHeader({ name, icons }: Props) {
 			<Icons>
 				{icons.map((icon, index) => {
 					return (
-						<SVGWrapper>
+						<SVGWrapper key={index}>
 							<Svg
-								key={index}
 								color="var(--accent-900)"
 								text={''}
 								textRotation={''}
