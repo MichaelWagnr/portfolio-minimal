@@ -38,6 +38,8 @@ const Background = styled.section`
 	background: linear-gradient(rgb(26, 27, 38, 1), rgba(0, 0, 0, 0.4)),
 		url(${bg});
 	background-size: cover;
+	//TODO ON MOBILE VIEW set bg-size to contain
+	/* background-size: contain; */
 	opacity: 0;
 	animation-name: fadein;
 	animation-duration: 1s;

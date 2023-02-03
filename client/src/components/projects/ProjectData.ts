@@ -9,6 +9,8 @@ export type Project = {
 		deploymentUrl: string
 		videoUrl: string
 		story: string[]
+		lessons: string[]
+		takeaways: string[]
 	}
 }
 
@@ -37,6 +39,20 @@ const ProjectData: Project[] = [
 
 				'Patch Diver is my way of creating what I wish existed for synthesizer enthusiasts. The MVP is compatible with the Yamaha DX100 but because of similarities between other Yamaha synthesizer models from the same period, it should hypothetically work with a number of models.',
 			],
+			lessons: [
+				'Working with the Web MIDI API',
+				'Converting 60+ components to TypeScript',
+				'Deploying and handling CORS issues',
+				'JWT authentication',
+				'Building UIs with SVGs',
+				"Binary two's complement + 8BitInts",
+				'Making 3rd party API calls on the BE',
+				'State management in a larger application',
+			],
+			takeaways: [
+				'Due to the time crunch some complexity was added to existing components and functions that ideally would have branched off into more specific parts.',
+				'Building authentication from the ground up was a rewarding experience, but I will need to add "reset password" functionality before promoting the app to real users.',
+			],
 		},
 	},
 	{
@@ -51,6 +67,8 @@ const ProjectData: Project[] = [
 			deploymentUrl: 'https://michaelwagnr.github.io/shared-expense-app/',
 			videoUrl: '',
 			story: [''],
+			lessons: [''],
+			takeaways: [''],
 		},
 	},
 ]

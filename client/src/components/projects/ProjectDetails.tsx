@@ -52,7 +52,21 @@ function ProjectDetails({ project }: Props) {
 						<p key={index}>{paragraph}</p>
 					))}
 				</div>
-				<div></div>
+				<div>
+					<Heading>
+						What I learned <span>+ Takeaways</span>
+					</Heading>
+					<ul className="lessons">
+						{project.data.lessons.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+					<ul className="takeaways">
+						{project.data.takeaways.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</div>
 			</ContentGrid>
 		</Container>
 	)
@@ -75,12 +89,24 @@ const ContentGrid = styled.div`
 	display: grid;
 	row-gap: 20px;
 	column-gap: 40px;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 3fr 2fr;
 	grid-template-rows: 1fr max-content;
 	padding: 20px 50px 50px;
 
 	p {
 		text-indent: 20px;
+	}
+
+	.lessons {
+		color: var(--accent-900);
+	}
+
+	.takeaways {
+		color: var(--primary-fg-300);
+	}
+
+	li {
+		list-style: disc;
 	}
 `
 
@@ -88,6 +114,10 @@ const Heading = styled.h5`
 	/* font-weight: lighter; */
 	margin-bottom: 20px;
 	color: var(--accent-900);
+
+	span {
+		color: var(--primary-fg-300);
+	}
 `
 
 const LinkContainer = styled.div`
