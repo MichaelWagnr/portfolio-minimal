@@ -16,7 +16,11 @@ function ProjectDetails({ project }: Props) {
 		<Container>
 			<ProjectHeader name={project.name} icons={projectIcons} />
 			{project.data.mainImgAlt && (
-				<MainImg src={project.data.mainImgSrc} alt={project.data.mainImgAlt} />
+				<MainImg
+					src={project.data.mainImgSrc}
+					alt={project.data.mainImgAlt}
+					width="98%"
+				/>
 			)}
 
 			<ContentGrid>
@@ -34,9 +38,11 @@ function ProjectDetails({ project }: Props) {
 						<Link target="_blank" href={project.data.deploymentUrl}>
 							Demo
 						</Link>
-						<Link target="_blank" href={project.data.videoUrl}>
-							Video
-						</Link>
+						{project.data.videoUrl && (
+							<Link target="_blank" href={project.data.videoUrl}>
+								Video
+							</Link>
+						)}
 					</LinkContainer>
 				</div>
 

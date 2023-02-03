@@ -42,7 +42,7 @@ function Studies() {
 				</ul>
 
 				<ul>
-					<li className="d">React Documentation</li>
+					<li className="d">Documentation</li>
 					<li className="d">Syntax.fm Podcast</li>
 					<li className="d">Talking with Developer friends</li>
 					<li className="d">Lots of StackOverflow & MDN...</li>

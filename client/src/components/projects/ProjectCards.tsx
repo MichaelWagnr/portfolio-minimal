@@ -5,15 +5,21 @@ import ProjectHeader from './ProjectHeader'
 
 type Props = {
 	project: Project
+	handleClick: React.Dispatch<React.SetStateAction<Project>>
+	scrollToProject: () => void
 }
 
-function ProjectCards({ project }: Props) {
+function ProjectCards({ project, handleClick, scrollToProject }: Props) {
 	const projectIcons = Icons.filter((icon) =>
 		project.data.technologies.includes(icon.text)
 	)
 
 	return (
-		<Container>
+		<Container
+			onClick={() => {
+				handleClick(project)
+				scrollToProject()
+			}}>
 			<ProjectHeader name={project.name} icons={projectIcons} />
 			<Description>
 				<Heading>Description</Heading>

@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import styled from 'styled-components'
 import ProjectCards from './ProjectCards'
 import ProjectDetails from './ProjectDetails'
 import ProjectData from './ProjectData'
 
 function Projects() {
+	const projectRef = useRef<HTMLDivElement>(null!)
+
 	const [currentlyViewed, setCurrentlyViewed] = useState(
 		ProjectData.filter((project) => project.name === 'Patch Diver')[0]
 	)
@@ -13,15 +15,29 @@ function Projects() {
 		(project) => project.name !== currentlyViewed.name
 	)
 
+	const scrollToProject = (): void => {
+		projectRef.current.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+		})
+	}
+
 	return (
 		<Background id="projects">
 			<Container>
 				<h2>Projects</h2>
-				<ProjectDetails project={currentlyViewed} />
+				<ProjectContainer ref={projectRef}>
+					<ProjectDetails project={currentlyViewed} />
+				</ProjectContainer>
 				<h4>click to view</h4>
 				<CardContainer>
 					{unselectedProjects.map((project) => (
-						<ProjectCards key={project.name} project={project} />
+						<ProjectCards
+							key={project.name}
+							project={project}
+							handleClick={setCurrentlyViewed}
+							scrollToProject={scrollToProject}
+						/>
 					))}
 				</CardContainer>
 			</Container>
@@ -55,6 +71,10 @@ const Container = styled.div`
 	h4 {
 		margin: 20px;
 	}
+`
+
+const ProjectContainer = styled.div`
+	padding-top: 5px;
 `
 
 const CardContainer = styled.div`
