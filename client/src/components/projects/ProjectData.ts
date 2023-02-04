@@ -66,9 +66,19 @@ const ProjectData: Project[] = [
 			githubUrl: 'https://github.com/MichaelWagnr/shared-expense-app',
 			deploymentUrl: 'https://michaelwagnr.github.io/shared-expense-app/',
 			videoUrl: '',
-			story: [''],
-			lessons: [''],
-			takeaways: [''],
+			story: [
+				'Prior to learning how to build applications, I built a sort of "no-code" solution to tracking expenses between me and someone I was living with at the time. It was a few google sheets that took in information in the form of a survey and calculated the totals of purchases and how much each party owed one another. I worked many hours on it and was really happy with the result.',
+				'As an introduction into building React applications, I re-imagined this solution in the form of a web app. It was pretty primitive, data was persisted in local storage, and there was questionable state management. However, I was again quite happy with the result.',
+			],
+			lessons: [
+				'Building a React app from scratch',
+				'Persisting data in local storage',
+				'React Hooks',
+				'Designing an single page app',
+			],
+			takeaways: [
+				'There were a couple bugs at the point of building this that are likely related to redudant useState hooks. It would be interesting to try remaking this from scratch.',
+			],
 		},
 	},
 ]

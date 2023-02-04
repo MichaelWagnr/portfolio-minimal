@@ -16,8 +16,8 @@ function Story() {
 				In my mid 20s, I worked as a Manager for a company that had two Python
 				Developers. I greatly admired their work and would often look curiously
 				at their computer monitors filled with colourfully highlighted text.
-				Inspired,{' '}
 				<Summary>
+					{' '}
 					I began learning <Tech>SQL</Tech> with the goal of helping write
 					database queries for my coworkers, later turning my interests towards
 					<Tech> Python</Tech>.

@@ -29,7 +29,6 @@ function Projects() {
 				<ProjectContainer ref={projectRef}>
 					<ProjectDetails project={currentlyViewed} />
 				</ProjectContainer>
-				<h4>click to view</h4>
 				<CardContainer>
 					{unselectedProjects.map((project) => (
 						<ProjectCards
@@ -82,6 +81,7 @@ const CardContainer = styled.div`
 	overflow-x: scroll;
 	gap: 10px;
 	padding: 10px;
+	margin: 10px 0px 0px -10px;
 `
 
 export default Projects
