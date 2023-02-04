@@ -29,23 +29,9 @@ function Studies() {
 					<li>Clean Code - Dec 2022</li>
 					<li>Mastering Regular Expressions - Oct 2022</li>
 					<li>Node.js, Express, MongoDB & More - Jun 2022</li>
-					<li>React & TypeScript For Everyone - Oct 2022</li>
-					<li>Sass Basics - Mar 2022</li>
 					<li>React For Beginners - Nov 2021</li>
-					<li>JavaScript 30 - Oct 2021</li>
-					<li>Command Line Power User - Oct 2021</li>
 					<li>CSS Grid - Oct 2021</li>
-					<li>What The Flexbox - Oct 2021</li>
 					<li>Beginner JavaScript - Sept 2021</li>
-					<li>Python Basics - Mar 2017</li>
-					<li>SQL Basics - Mar 2017</li>
-				</ul>
-
-				<ul>
-					<li className="d">Documentation</li>
-					<li className="d">Syntax.fm Podcast</li>
-					<li className="d">Talking with Developer friends</li>
-					<li className="d">Lots of StackOverflow & MDN...</li>
 				</ul>
 			</Lists>
 		</Container>
