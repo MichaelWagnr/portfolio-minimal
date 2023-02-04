@@ -36,7 +36,7 @@ function ProjectDetails({ project }: Props) {
 							Github
 						</Link>
 						<Link target="_blank" href={project.data.deploymentUrl}>
-							Demo
+							View
 						</Link>
 						{project.data.videoUrl && (
 							<Link target="_blank" href={project.data.videoUrl}>
