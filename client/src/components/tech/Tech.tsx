@@ -33,9 +33,8 @@ function Tech() {
 
 const Background = styled.section`
 	min-height: fit-content;
-	/* height: 126vh; */
 	width: 100vw;
-	background: linear-gradient(rgb(26, 27, 38, 1), rgba(0, 0, 0, 0.4)),
+	background: linear-gradient(rgb(26, 27, 38, 1), rgba(0, 0, 0, 0.3)),
 		url(${bg});
 	background-size: cover;
 	//TODO ON MOBILE VIEW set bg-size to contain
