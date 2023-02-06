@@ -63,7 +63,7 @@ const ContactCard = styled.div`
 	gap: 10px;
 
 	span {
-		color: var(--accent-700);
+		color: var(--accent-1000);
 	}
 `
 
