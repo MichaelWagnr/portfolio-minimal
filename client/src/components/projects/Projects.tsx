@@ -46,7 +46,6 @@ function Projects() {
 
 const Background = styled.section`
 	min-height: fit-content;
-	padding-bottom: 20px;
 	width: 100vw;
 	background: var(--primary-bg-600);
 	background: linear-gradient(var(--primary-bg-700), var(--primary-bg-400));
