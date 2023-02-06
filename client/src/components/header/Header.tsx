@@ -6,7 +6,9 @@ function Header() {
 			<PageLinks>
 				<Link href="#about">About</Link>
 				<Link href="#projects">Projects</Link>
-				<Link href="#contact">Contact</Link>
+				<Link href="#contact">
+					<span>Contact</span>
+				</Link>
 			</PageLinks>
 		</Container>
 	)
@@ -35,8 +37,13 @@ const Link = styled.a`
 	font-size: var(--h5);
 	text-decoration: none;
 
-	&:hover {
+	&:hover,
+	span:hover {
 		/* color: var(--accent-500); */
+		color: var(--accent-1000);
+	}
+
+	span {
 		color: var(--accent-900);
 	}
 `
