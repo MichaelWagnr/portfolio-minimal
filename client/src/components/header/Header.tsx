@@ -19,10 +19,14 @@ const Container = styled.header`
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	/* justify-content: center; */
 	padding-right: 20px;
 	max-width: 1200px;
 	margin: auto;
+
+	@media (max-width: 500px) {
+		justify-content: center;
+		padding-right: 0px;
+	}
 `
 
 const PageLinks = styled.div`
@@ -33,13 +37,11 @@ const PageLinks = styled.div`
 
 const Link = styled.a`
 	color: inherit;
-	/* color: var(--primary-fg-300); */
 	font-size: var(--h5);
 	text-decoration: none;
 
 	&:hover,
 	span:hover {
-		/* color: var(--accent-500); */
 		color: var(--accent-1000);
 	}
 
