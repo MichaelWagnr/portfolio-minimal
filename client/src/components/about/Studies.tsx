@@ -28,7 +28,7 @@ function Studies() {
 				<ul className="b">
 					<li>Clean Code - Dec 2022</li>
 					<li>Mastering Regular Expressions - Oct 2022</li>
-					<li>Node.js, Express, MongoDB & More - Jun 2022</li>
+					<li>Node.js, Express, MongoDB - Jun 2022</li>
 					<li>React For Beginners - Nov 2021</li>
 					<li>CSS Grid - Oct 2021</li>
 					<li>Beginner JavaScript - Sept 2021</li>
