@@ -37,15 +37,11 @@ const Background = styled.section`
 	background: linear-gradient(rgb(26, 27, 38, 1), rgba(0, 0, 0, 0.3)),
 		url(${bg});
 	background-size: cover;
-	//TODO ON MOBILE VIEW set bg-size to contain
-	/* background-size: contain; */
 	opacity: 0;
 	animation-name: fadein;
 	animation-duration: 1s;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
-
-	/* clip-path: polygon(0% 0%, 0% 90%, 100% 100%, 100% 0%); */
 
 	@keyframes fadein {
 		from {
@@ -56,6 +52,10 @@ const Background = styled.section`
 			opacity: 1;
 		}
 	}
+
+	@media (max-width: 495px) {
+		background-size: contain;
+	}
 `
 
 const Container = styled.div`
@@ -65,6 +65,10 @@ const Container = styled.div`
 	max-width: 1200px;
 	margin: auto;
 	padding: 40vh 20px 25vh;
+
+	@media (max-width: 495px) {
+		padding: 200px 5px 100px;
+	}
 `
 
 const Heading = styled.div`
@@ -98,6 +102,13 @@ const IconContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+
+	@media (max-width: 495px) {
+		& > * {
+			width: 100px;
+			height: 100px;
+		}
+	}
 `
 
 export default Tech
