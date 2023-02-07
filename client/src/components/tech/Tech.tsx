@@ -67,7 +67,7 @@ const Container = styled.div`
 	padding: 40vh 20px 25vh;
 
 	@media (max-width: 495px) {
-		padding: 200px 5px 100px;
+		padding: 38vh 5px 100px;
 	}
 `
 
@@ -105,8 +105,8 @@ const IconContainer = styled.div`
 
 	@media (max-width: 495px) {
 		& > * {
-			width: 100px;
-			height: 100px;
+			width: 120px;
+			height: 120px;
 		}
 	}
 `
