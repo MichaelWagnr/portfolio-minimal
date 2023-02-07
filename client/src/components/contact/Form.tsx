@@ -141,6 +141,10 @@ const StyledForm = styled.form`
 	textarea {
 		height: 200px;
 		resize: none;
+
+		@media (max-width: 495px) {
+			height: 130px;
+		}
 	}
 
 	button {

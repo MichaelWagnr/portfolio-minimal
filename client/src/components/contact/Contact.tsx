@@ -38,6 +38,7 @@ function Contact() {
 
 const Background = styled.section`
 	height: 100vh;
+	min-height: fit-content;
 	width: 100vw;
 	background: var(--primary-bg-600);
 	background: linear-gradient(var(--primary-bg-700), var(--primary-bg-700));
@@ -46,6 +47,7 @@ const Background = styled.section`
 
 const Container = styled.div`
 	height: 100vh;
+	min-height: fit-content;
 	display: grid;
 	place-content: center;
 	max-width: 1200px;
@@ -64,6 +66,11 @@ const ContactCard = styled.div`
 
 	span {
 		color: var(--accent-1000);
+	}
+
+	@media (max-width: 560px) {
+		border: none;
+		padding: 0px 20px 10px;
 	}
 `
 
