@@ -20,6 +20,11 @@ const Container = styled.main`
 	justify-content: flex-end;
 	max-width: 1200px;
 	margin: auto;
+
+	@media (max-width: 495px) {
+		height: fit-content;
+		padding-top: 50px;
+	}
 `
 
 export default Main
