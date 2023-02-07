@@ -84,6 +84,9 @@ const Lists = styled.div`
 
 	li {
 		list-style: inside;
+		@media (max-width: 495px) {
+			list-style: none;
+		}
 	}
 `
 

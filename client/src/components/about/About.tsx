@@ -14,12 +14,10 @@ function About() {
 }
 
 const Background = styled.section`
-	/* margin-top: -110px; */
 	min-height: fit-content;
 	width: 100vw;
 	background: var(--primary-bg-700);
 	border-top: 1px solid var(--primary-fg-300);
-	/* clip-path: polygon(0px 110px, 100% 0px, 100% 100%, 0% 100%); */
 `
 
 const Container = styled.div`
@@ -33,6 +31,10 @@ const Container = styled.div`
 	h2 {
 		color: var(--primary-fg-300);
 		text-align: center;
+	}
+
+	@media (max-width: 495px) {
+		flex-direction: column;
 	}
 `
 
