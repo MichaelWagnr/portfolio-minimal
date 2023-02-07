@@ -109,7 +109,8 @@ const ContentGrid = styled.div`
 		list-style: disc;
 	}
 
-	@media (max-width: 495px) {
+	/* @media (max-width: 495px) { */
+	@media (max-width: 732px) {
 		display: flex;
 		flex-direction: column;
 		padding: 20px;

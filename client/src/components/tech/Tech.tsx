@@ -53,7 +53,7 @@ const Background = styled.section`
 		}
 	}
 
-	@media (max-width: 495px) {
+	@media (max-width: 732px) {
 		background-size: contain;
 	}
 `

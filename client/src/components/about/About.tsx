@@ -33,7 +33,8 @@ const Container = styled.div`
 		text-align: center;
 	}
 
-	@media (max-width: 495px) {
+	/* @media (max-width: 495px) { */
+	@media (max-width: 732px) {
 		flex-direction: column;
 	}
 `
