@@ -108,10 +108,15 @@ const ContentGrid = styled.div`
 	li {
 		list-style: disc;
 	}
+
+	@media (max-width: 495px) {
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+	}
 `
 
 const Heading = styled.h5`
-	/* font-weight: lighter; */
 	margin-bottom: 20px;
 	color: var(--accent-900);
 
