@@ -32,6 +32,10 @@ const Container = styled.div`
 			opacity: 1;
 		}
 	}
+
+	@media (max-width: 495px) {
+		width: 248px;
+	}
 `
 
 export default SubHeading
