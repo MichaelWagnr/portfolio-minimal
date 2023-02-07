@@ -19,6 +19,12 @@ const Container = styled.div`
 		position: relative;
 		right: 3px;
 		top: 9px;
+
+		@media (max-width: 495px) {
+			font-size: var(--h1);
+			line-height: 60px;
+			top: -20px;
+		}
 	}
 
 	h2 {
@@ -40,6 +46,15 @@ const Container = styled.div`
 		animation-duration: 0.6s;
 		animation-timing-function: ease-in;
 		animation-fill-mode: forwards;
+
+		@media (max-width: 495px) {
+			font-size: var(--h4);
+
+			&::before {
+				bottom: 42px;
+				font-size: var(--p);
+			}
+		}
 	}
 
 	@keyframes subtitle {
@@ -83,6 +98,10 @@ const Logo = styled.img`
 			right: 89px;
 			rotate: 0deg;
 		}
+	}
+
+	@media (max-width: 495px) {
+		display: none;
 	}
 `
 
