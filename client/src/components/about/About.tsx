@@ -18,6 +18,7 @@ const Background = styled.section`
 	width: 100vw;
 	background: var(--primary-bg-700);
 	border-top: 1px solid var(--primary-fg-300);
+	scroll-margin-top: 16vh;
 `
 
 const Container = styled.div`
