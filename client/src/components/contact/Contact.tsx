@@ -37,7 +37,8 @@ function Contact() {
 }
 
 const Background = styled.section`
-	height: 100vh;
+	/* height: 100vh; */
+	height: calc(100vh - 50px);
 	min-height: fit-content;
 	width: 100vw;
 	background: var(--primary-bg-600);
@@ -46,12 +47,11 @@ const Background = styled.section`
 `
 
 const Container = styled.div`
-	height: 100vh;
 	min-height: fit-content;
 	display: grid;
 	place-content: center;
 	max-width: 1200px;
-	margin: auto;
+	margin: 40px auto;
 `
 
 const ContactCard = styled.div`
