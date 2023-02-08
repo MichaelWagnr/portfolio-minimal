@@ -148,8 +148,8 @@ const StyledForm = styled.form`
 	}
 
 	button {
-		color: var(--accent-700);
-		border: 1px solid var(--accent-700);
+		color: var(--accent-900);
+		border: 1px solid var(--accent-900);
 		background: inherit;
 		display: block;
 		width: 100px;
