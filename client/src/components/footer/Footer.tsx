@@ -4,7 +4,7 @@ function Footer() {
 	return (
 		<Background>
 			<Container>
-				<p>Built by Michael Wagner with React + TypeScript</p>
+				<p>Built with React + TypeScript</p>
 				<PageLinks>
 					<Link
 						href="https://github.com/MichaelWagnr"

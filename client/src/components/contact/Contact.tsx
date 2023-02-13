@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Footer from '../footer/Footer'
 import Form from './Form'
 
 function Contact() {
@@ -21,28 +22,17 @@ function Contact() {
 					</p>
 
 					<Form />
-
-					{/* <LinkContainer>
-						<Link
-							href="https://www.linkedin.com/in/michael-wagner-9339881a0/"
-							target="_blank">
-							LinkedIn
-						</Link>
-						<Link href="mailto:michaelwagner780@gmail.com">Email</Link>
-					</LinkContainer> */}
 				</ContactCard>
 			</Container>
+			<Footer />
 		</Background>
 	)
 }
 
 const Background = styled.section`
-	/* height: 100vh; */
-	height: calc(100vh - 50px);
-	min-height: fit-content;
+	min-height: calc(fit-content + 50px);
 	width: 100vw;
-	background: var(--primary-bg-600);
-	background: linear-gradient(var(--primary-bg-700), var(--primary-bg-700));
+	background: var(--primary-bg-700);
 	border-top: 1px solid var(--primary-fg-300);
 `
 
