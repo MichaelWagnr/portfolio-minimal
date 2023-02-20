@@ -13,7 +13,7 @@ function Footer() {
 						GitHub
 					</Link>
 					<Link
-						href="https://www.linkedin.com/in/michael-wagner-9339881a0/"
+						href="https://www.linkedin.com/in/mwagner514"
 						target="_blank"
 						className="linkedin">
 						LinkedIn
