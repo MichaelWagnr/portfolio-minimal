@@ -11,14 +11,14 @@ function Contact() {
 						<h2>Contact</h2>
 					</Heading>
 					<p>
-						Interested in working together? Let me know if there is anything I
-						can do for you!{' '}
-						<span>
+						{/* Interested in working together? Let me know if there is anything I
+						can do for you!{' '} */}
+						{/* <span>
 							I am currently available for Montréal-based or remote Developer
 							positions.
-						</span>{' '}
-						Or feel free to reach out if you have any questions; would like to
-						meet for coffee or talk shop.
+						</span>{' '} */}
+						Feel free to reach out if you have any questions; would like to meet
+						for coffee or talk shop!
 					</p>
 
 					<Form />
