@@ -1,53 +1,15 @@
-import styled from 'styled-components'
-
 function Header() {
 	return (
-		<Container>
-			<PageLinks>
-				<Link href="#about">About</Link>
-				<Link href="#projects">Projects</Link>
-				<Link href="#contact">
-					<span>Contact</span>
-				</Link>
-			</PageLinks>
-		</Container>
+		<header className="h-15 flex items-center justify-end pr-5 max-w-page mx-auto max-[500px]:justify-center max-[500px]:pr-0">
+			<div className="flex gap-6 *:text-[1.1rem] *:hover:text-accent-1000">
+				<a href="#about">About</a>
+				<a href="#projects">Projects</a>
+				<a href="#contact">
+					<span className="text-accent-900 hover:text-accent-1000">Contact</span>
+				</a>
+			</div>
+		</header>
 	)
 }
-
-const Container = styled.header`
-	height: 100px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	padding-right: 20px;
-	max-width: 1200px;
-	margin: auto;
-
-	@media (max-width: 500px) {
-		justify-content: center;
-		padding-right: 0px;
-	}
-`
-
-const PageLinks = styled.div`
-	display: flex;
-	min-width: 250px;
-	gap: 30px;
-`
-
-const Link = styled.a`
-	color: inherit;
-	font-size: var(--h5);
-	text-decoration: none;
-
-	&:hover,
-	span:hover {
-		color: var(--accent-1000);
-	}
-
-	span {
-		color: var(--accent-900);
-	}
-`
 
 export default Header

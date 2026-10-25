@@ -2,15 +2,17 @@ export type Project = {
 	name: string
 	data: {
 		technologies: string[]
+		// short line for the project tab; description is shown in full in the details
+		summary: string
 		mainImgSrc: string
 		mainImgAlt: string
 		description: string
-		githubUrl: string
-		deploymentUrl: string
-		videoUrl: string
+		githubUrl?: string
+		deploymentUrl?: string
+		videoUrl?: string
 		story: string[]
-		lessons: string[]
-		takeaways: string[]
+		lessons?: string[]
+		takeaways?: string[]
 	}
 }
 
@@ -27,6 +29,7 @@ const ProjectData: Project[] = [
 				'MONGO DB',
 				'FIGMA',
 			],
+			summary: 'Online patch editor for hardware synthesizers.',
 			mainImgSrc: '/patchdiver.png',
 			mainImgAlt: 'Browser screenshot of Patch Diver app',
 			description:
@@ -56,9 +59,31 @@ const ProjectData: Project[] = [
 		},
 	},
 	{
+		name: 'MTL Radio',
+		data: {
+			technologies: [
+				'TYPESCRIPT',
+				'ANGULAR',
+				'NESTJS',
+				'TAILWIND',
+				'PRISMA',
+			],
+			summary: 'Online radio for upcoming Montréal music events.',
+			mainImgSrc: '/mtl-radio.png',
+			mainImgAlt: 'Browser screenshot of MTL Radio app',
+			description:
+				'MTL Radio is an online radio that highlights upcoming music events and performances in Montréal.',
+			story: [
+				'Montréal has a great underground music scene, but figuring out which shows to attend took more work than it should have. I would open several event sites, then open many more links to each artist to get a sense of their music before deciding where to go.',
+				'I built MTL Radio to consolidate that process. It gathers upcoming events from prominent underground venues and streams the artists playing them, so I can listen through a lineup and decide what is worth attending, all in one place.',
+			],
+		},
+	},
+	{
 		name: 'Royal Mint',
 		data: {
 			technologies: ['JAVASCRIPT ES6+', 'REACT', 'CSS3'],
+			summary: 'Shared expense tracker for two people.',
 			mainImgSrc: '/royalmint.png',
 			mainImgAlt: 'Browser screenshot of Royal Mint App',
 			description:

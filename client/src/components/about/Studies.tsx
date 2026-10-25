@@ -1,21 +1,19 @@
-import styled from 'styled-components'
-
 function Studies() {
 	return (
-		<Container>
-			<Heading>
-				<h2>Studies</h2>
-				<h3>
-					<span className="a">School </span>
-					<span className="c">Books </span>
-					<span className="b">Courses </span>
+		<div className="flex-1">
+			<div className="text-center mb-10">
+				<h2 className="text-primary-fg-300">Studies</h2>
+				<h3 className="-mt-[30px] *:text-p *:font-thin">
+					<span className="text-accent-700">School </span>
+					<span className="text-accent-1000">Books </span>
+					<span className="text-accent-800">Courses </span>
 				</h3>
-			</Heading>
-			<Lists>
-				<ul className="a">
+			</div>
+			<div className="grid justify-center *:list-inside *:list-disc max-phone:*:list-none">
+				<ul className="text-accent-700">
 					<li>Concordia University Web Development Diploma</li>
 				</ul>
-				<ul className="c">
+				<ul className="text-accent-1000">
 					<li>Programming TypeScript - Boris Cherny</li>
 					<li>Eloquent JavaScript - Marijn Haverbeke</li>
 					<li>HF Git - Raju Gandhi</li>
@@ -25,7 +23,7 @@ function Studies() {
 					<li>HF JavaScript Programming - Eric Freeman</li>
 					<li>HF HTML and CSS - Elisabeth Robson</li>
 				</ul>
-				<ul className="b">
+				<ul className="text-accent-800">
 					<li>Clean Code - Dec 2022</li>
 					<li>Mastering Regular Expressions - Oct 2022</li>
 					<li>Node.js, Express, MongoDB - Jun 2022</li>
@@ -33,61 +31,9 @@ function Studies() {
 					<li>CSS Grid - Oct 2021</li>
 					<li>Beginner JavaScript - Sept 2021</li>
 				</ul>
-			</Lists>
-		</Container>
+			</div>
+		</div>
 	)
 }
-
-const Container = styled.div`
-	h2 {
-		color: var(--primary-fg-300);
-		text-align: center;
-	}
-
-	.a {
-		color: var(--accent-700);
-	}
-	.b {
-		color: var(--accent-800);
-	}
-	.c {
-		color: var(--accent-1000);
-	}
-	.d {
-		color: var(--primary-fg-300);
-	}
-
-	flex: 1;
-`
-
-const Heading = styled.div`
-	text-align: center;
-	margin-bottom: 40px;
-
-	h2 {
-		color: var(--primary-fg-300);
-	}
-
-	h3 {
-		margin-top: -30px;
-	}
-
-	span {
-		font-size: var(--p);
-		font-weight: lighter;
-	}
-`
-
-const Lists = styled.div`
-	display: grid;
-	justify-content: center;
-
-	li {
-		list-style: inside;
-		@media (max-width: 495px) {
-			list-style: none;
-		}
-	}
-`
 
 export default Studies
