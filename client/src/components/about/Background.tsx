@@ -1,17 +1,25 @@
-import styled from 'styled-components'
+import { ReactNode } from 'react'
+
+const Tech = ({ children }: { children: ReactNode }) => (
+	<span className="text-accent-100">{children}</span>
+)
+
+const Summary = ({ children }: { children: ReactNode }) => (
+	<span className="text-accent-300">{children}</span>
+)
 
 function Story() {
 	return (
-		<Container>
-			<Heading>
-				<h2>Background</h2>
-				<h3>
-					<span className="a">
+		<div className="flex-1 max-w-3xl mx-auto [&>p]:mb-2.5 [&>p]:indent-5">
+			<div className="text-center mb-10">
+				<h2 className="text-primary-fg-300">Background</h2>
+				<h3 className="-mt-[30px]">
+					<span className="text-p font-thin text-accent-900">
 						How I got into programming - <Summary>TL</Summary>
 						<Tech>DR</Tech>
 					</span>
 				</h3>
-			</Heading>
+			</div>
 			<p>
 				In my mid 20s, I worked as a Manager for a company that had two Python
 				Developers. I greatly admired their work and would often look curiously
@@ -47,54 +55,18 @@ function Story() {
 					<Tech>TypeScript</Tech>, culminating in the ability to program complex
 					applications
 				</Summary>{' '}
-				I could not have imagined myself building when I first started. To date,
-				I continue to learn new technologies and develop.
+				I could not have imagined myself building when I first started.
 			</p>
-		</Container>
+			<p>
+				<Summary>
+					In 2023 I joined Connect it, developing custom <Tech>Angular</Tech>{' '}
+					and <Tech>NestJS</Tech> web applications for dozens of clients.
+				</Summary>{' '}
+				Along the way I built custom app integrations and mentored several
+				junior developers.
+			</p>
+		</div>
 	)
 }
-
-const Container = styled.div`
-	h2 {
-		color: var(--primary-fg-300);
-		text-align: center;
-	}
-
-	flex: 1;
-
-	p {
-		margin-bottom: 10px;
-		text-indent: 20px;
-	}
-`
-
-const Heading = styled.div`
-	text-align: center;
-	margin-bottom: 40px;
-
-	h2 {
-		color: var(--primary-fg-300);
-	}
-
-	h3 {
-		margin-top: -30px;
-	}
-
-	span {
-		font-size: var(--p);
-		font-weight: lighter;
-		&.a {
-			color: var(--accent-900);
-		}
-	}
-`
-
-const Tech = styled.span`
-	color: var(--accent-100);
-`
-
-const Summary = styled.span`
-	color: var(--accent-300);
-`
 
 export default Story

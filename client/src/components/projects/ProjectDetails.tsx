@@ -1,154 +1,90 @@
-import styled from 'styled-components'
 import { Project } from './ProjectData'
-import Icons from './../tech/Icons'
-import ProjectHeader from './ProjectHeader'
+import ProjectIcons from './ProjectIcons'
 
 type Props = {
 	project: Project
 }
 
-function ProjectDetails({ project }: Props) {
-	const projectIcons = Icons.filter((icon) =>
-		project.data.technologies.includes(icon.text)
-	)
+const link =
+	'border border-accent-1000 text-accent-1000 rounded-[5px] py-0.5 px-2.5 w-[70px] text-center transition-all duration-400 scale-[1.02] shadow-[0_2.5px_rgba(240,46,170,0.4),0_5px_rgba(240,46,170,0.3)] hover:scale-100 hover:translate-y-[2.5px] hover:shadow-[0_5px_12px_rgba(240,46,170,0.3),0_2.5px_rgba(240,46,170,0.4)]'
 
+const heading = 'mb-5 text-accent-900'
+
+function ProjectDetails({ project }: Props) {
+	const { githubUrl, deploymentUrl, videoUrl, lessons, takeaways } =
+		project.data
+
+	const links = [
+		['Github', githubUrl],
+		['View', deploymentUrl],
+		['Video', videoUrl],
+	].filter(([, url]) => url)
+	const hasLessons = !!(lessons?.length || takeaways?.length)
+
+	// left column: Description + Story, right column: Links + Lessons (either may be missing)
 	return (
-		<Container>
-			<ProjectHeader name={project.name} icons={projectIcons} />
+		<div>
+			<div className="py-5 bg-primary-bg-700 border-b border-accent-900 grid justify-items-center gap-1 text-accent-900 text-center">
+				<h3 className="text-[2rem] leading-tight">{project.name}</h3>
+				<p className="text-[0.8rem] italic text-primary-fg-300">Technologies used:</p>
+				<ProjectIcons technologies={project.data.technologies} size="30px" />
+			</div>
 			{project.data.mainImgAlt && (
-				<MainImg
+				<img
+					className="rounded-[5px] w-[98%] m-[1%]"
 					src={project.data.mainImgSrc}
 					alt={project.data.mainImgAlt}
-					width="98%"
 				/>
 			)}
 
-			<ContentGrid>
-				<div>
-					<Heading>Description</Heading>
+			<div
+				className="grid gap-y-5 gap-x-10 grid-cols-[3fr_2fr] grid-rows-[1fr_max-content] pt-5 px-[50px] pb-[50px] [&_p]:indent-5 max-tablet:flex max-tablet:flex-col max-tablet:p-5">
+				<div className="col-start-1">
+					<h5 className={heading}>Description</h5>
 					<p>{project.data.description}</p>
 				</div>
 
-				<div>
-					<Heading>Links</Heading>
-					<LinkContainer>
-						<Link target="_blank" href={project.data.githubUrl}>
-							Github
-						</Link>
-						<Link target="_blank" href={project.data.deploymentUrl}>
-							View
-						</Link>
-						{project.data.videoUrl && (
-							<Link target="_blank" href={project.data.videoUrl}>
-								Video
-							</Link>
-						)}
-					</LinkContainer>
-				</div>
+				{links.length > 0 && (
+					<div className="col-start-2">
+						<h5 className={heading}>Links</h5>
+						<div className="flex gap-5 flex-wrap">
+							{links.map(([label, url]) => (
+								<a key={label} className={link} target="_blank" href={url}>
+									{label}
+								</a>
+							))}
+						</div>
+					</div>
+				)}
 
-				<div>
-					<Heading>Story</Heading>
+				<div className="col-start-1">
+					<h5 className={heading}>Story</h5>
 					{project.data.story.map((paragraph, index) => (
 						<p key={index}>{paragraph}</p>
 					))}
 				</div>
-				<div>
-					<Heading>
-						What I learned <span>+ Takeaways</span>
-					</Heading>
-					<ul className="lessons">
-						{project.data.lessons.map((item, index) => (
-							<li key={index}>{item}</li>
-						))}
-					</ul>
-					<ul className="takeaways">
-						{project.data.takeaways.map((item, index) => (
-							<li key={index}>{item}</li>
-						))}
-					</ul>
-				</div>
-			</ContentGrid>
-		</Container>
+
+				{hasLessons && (
+					<div className="col-start-2">
+						<h5 className={heading}>
+							What I learned{' '}
+							<span className="text-primary-fg-300">+ Takeaways</span>
+						</h5>
+						<ul className="list-disc text-accent-900">
+							{lessons?.map((item, index) => (
+								<li key={index}>{item}</li>
+							))}
+						</ul>
+						<ul className="list-disc text-primary-fg-300">
+							{takeaways?.map((item, index) => (
+								<li key={index}>{item}</li>
+							))}
+						</ul>
+					</div>
+				)}
+			</div>
+		</div>
 	)
 }
-
-const Container = styled.div`
-	border: 1px solid var(--accent-900);
-	border-radius: 5px;
-	overflow-x: hidden;
-	min-height: fit-content;
-`
-
-const MainImg = styled.img`
-	border-radius: 5px;
-	width: 98%;
-	margin: 1% 1%;
-`
-
-const ContentGrid = styled.div`
-	display: grid;
-	row-gap: 20px;
-	column-gap: 40px;
-	grid-template-columns: 3fr 2fr;
-	grid-template-rows: 1fr max-content;
-	padding: 20px 50px 50px;
-
-	p {
-		text-indent: 20px;
-	}
-
-	.lessons {
-		color: var(--accent-900);
-	}
-
-	.takeaways {
-		color: var(--primary-fg-300);
-	}
-
-	li {
-		list-style: disc;
-	}
-
-	/* @media (max-width: 495px) { */
-	@media (max-width: 732px) {
-		display: flex;
-		flex-direction: column;
-		padding: 20px;
-	}
-`
-
-const Heading = styled.h5`
-	margin-bottom: 20px;
-	color: var(--accent-900);
-
-	span {
-		color: var(--primary-fg-300);
-	}
-`
-
-const LinkContainer = styled.div`
-	display: flex;
-	gap: 20px;
-	flex-wrap: wrap;
-`
-
-const Link = styled.a`
-	border: 1px solid var(--accent-1000);
-	color: var(--accent-1000);
-	text-decoration: none;
-	border-radius: 5px;
-	padding: 2px 10px;
-	width: 70px;
-	text-align: center;
-	transition: all 0.4s;
-	box-shadow: rgba(240, 46, 170, 0.4) 0px 2.5px, rgba(240, 46, 170, 0.3) 0px 5px;
-	transform: scale(1.02);
-
-	&:hover {
-		transform: scale(1) translateY(2.5px);
-		box-shadow: rgba(240, 46, 170, 0.3) 0px 5px 12px,
-			rgba(240, 46, 170, 0.4) 0px 2.5px;
-	}
-`
 
 export default ProjectDetails

@@ -1,30 +1,13 @@
-import styled from 'styled-components'
 import Heading from './Heading'
 import SubHeading from './SubHeading'
 
 function Main() {
 	return (
-		<Container>
+		<main className="pl-2.5 min-h-[200px] h-[calc(60vh-60px)] flex flex-col justify-end max-w-page mx-auto max-phone:h-fit max-phone:pt-[50px]">
 			<Heading />
 			<SubHeading />
-		</Container>
+		</main>
 	)
 }
-
-const Container = styled.main`
-	padding-left: 10px;
-	min-height: 200px;
-	height: calc(60vh - 100px);
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	max-width: 1200px;
-	margin: auto;
-
-	@media (max-width: 495px) {
-		height: fit-content;
-		padding-top: 50px;
-	}
-`
 
 export default Main

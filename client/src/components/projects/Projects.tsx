@@ -1,86 +1,34 @@
-import { useRef, useState } from 'react'
-import styled from 'styled-components'
-import ProjectCards from './ProjectCards'
-import ProjectDetails from './ProjectDetails'
+import { useState } from 'react'
 import ProjectData from './ProjectData'
+import ProjectDetails from './ProjectDetails'
+import ProjectTab from './ProjectTab'
 
 function Projects() {
-	const projectRef = useRef<HTMLDivElement>(null!)
-
-	const [currentlyViewed, setCurrentlyViewed] = useState(
-		ProjectData.filter((project) => project.name === 'Patch Diver')[0]
-	)
-
-	const unselectedProjects = ProjectData.filter(
-		(project) => project.name !== currentlyViewed.name
-	)
-
-	const scrollToProject = (): void => {
-		projectRef.current.scrollIntoView({
-			behavior: 'smooth',
-			block: 'start',
-		})
-	}
+	const [selected, setSelected] = useState(ProjectData[0].name)
+	const project = ProjectData.find((project) => project.name === selected)!
 
 	return (
-		<Background id="projects">
-			<Container>
-				<h2>Projects</h2>
-				<ProjectContainer ref={projectRef}>
-					<ProjectDetails project={currentlyViewed} />
-				</ProjectContainer>
-				<CardContainer>
-					{unselectedProjects.map((project) => (
-						<ProjectCards
+		<section
+			id="projects"
+			className="min-h-fit w-full bg-linear-to-b/srgb from-primary-bg-700 to-primary-bg-400">
+			<div className="p-5 max-w-page mx-auto flex flex-col gap-2.5">
+				<h2 className="text-primary-fg-300 text-center mb-7.5">Projects</h2>
+				<div className="grid grid-cols-3 gap-2.5 max-tablet:flex max-tablet:overflow-x-auto max-tablet:snap-x max-tablet:p-0.5">
+					{ProjectData.map((project) => (
+						<ProjectTab
 							key={project.name}
 							project={project}
-							handleClick={setCurrentlyViewed}
-							scrollToProject={scrollToProject}
+							checked={project.name === selected}
+							onSelect={() => setSelected(project.name)}
 						/>
 					))}
-				</CardContainer>
-			</Container>
-		</Background>
+				</div>
+				<div className="border border-accent-900 rounded-[5px] overflow-hidden">
+					<ProjectDetails project={project} />
+				</div>
+			</div>
+		</section>
 	)
 }
-
-const Background = styled.section`
-	min-height: fit-content;
-	width: 100vw;
-	background: var(--primary-bg-600);
-	background: linear-gradient(var(--primary-bg-700), var(--primary-bg-400));
-`
-
-const Container = styled.div`
-	padding: 20px;
-	max-width: 1200px;
-	margin: auto;
-
-	display: flex;
-	flex-direction: column;
-
-	h2,
-	h4 {
-		color: var(--primary-fg-300);
-		text-align: center;
-		margin-bottom: 40px;
-	}
-
-	h4 {
-		margin: 20px;
-	}
-`
-
-const ProjectContainer = styled.div`
-	padding-top: 5px;
-`
-
-const CardContainer = styled.div`
-	display: flex;
-	overflow-x: scroll;
-	gap: 10px;
-	padding: 10px;
-	margin: 10px 0px 0px -10px;
-`
 
 export default Projects

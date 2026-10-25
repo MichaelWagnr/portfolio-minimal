@@ -1,0 +1,134 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-*: initial;
+
+	--color-primary-fg-100: #c0caf5;
+	--color-primary-fg-200: #a9b1d6;
+	--color-primary-fg-300: #9aa5ce;
+	--color-primary-fg-400: #cfc9c2;
+
+	--color-primary-bg-100: #565f89;
+	--color-primary-bg-200: #414868;
+	--color-primary-bg-300: #24283b;
+	--color-primary-bg-400: #1a1b26;
+	--color-primary-bg-500: #0f0f14;
+	--color-primary-bg-600: #0c0c0e;
+	--color-primary-bg-700: #030303;
+
+	--color-accent-100: #f7768e;
+	--color-accent-200: #ff9e64;
+	--color-accent-300: #e0af68;
+	--color-accent-400: #9ece6a;
+	--color-accent-500: #73daca;
+	--color-accent-600: #b4f9f8;
+	--color-accent-700: #2ac3de;
+	--color-accent-800: #7dcfff;
+	--color-accent-900: #7aa2f7;
+	--color-accent-1000: #bb9af7;
+
+	/* Type-Scale: Perfect Fourth */
+	--text-h1: 4.209rem;
+	--text-h2: 3.157rem;
+	--text-h3: 2.369rem;
+	--text-h4: 1.777rem;
+	--text-h5: 1.333rem;
+	--text-p: 1rem;
+	--text-h6: 0.75rem;
+
+	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+	/* max-phone: = max-width 495px, max-tablet: = max-width 732px */
+	--breakpoint-phone: 496px;
+	--breakpoint-tablet: 733px;
+
+	--container-page: 1200px;
+
+	--animate-fadein: fadein 1s linear forwards;
+	--animate-fadein-delayed: fadein 0.6s ease-out 0.6s forwards;
+	--animate-subtitle: subtitle 0.6s ease-in forwards;
+	--animate-logo: logo 0.6s ease-out forwards;
+
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes subtitle {
+		0%,
+		99% {
+			color: var(--color-primary-fg-300);
+		}
+		100% {
+			color: var(--color-accent-900);
+		}
+	}
+
+	@keyframes logo {
+		from {
+			width: 180px;
+			filter: grayscale(10) invert(0.2);
+			opacity: 0;
+			bottom: 22px;
+			right: -9px;
+			rotate: 360deg;
+		}
+		to {
+			width: 40px;
+			filter: grayscale(0) invert(0.25);
+			opacity: 1;
+			bottom: 22px;
+			right: 89px;
+			rotate: 0deg;
+		}
+	}
+}
+
+@layer base {
+	/* thin, low-contrast scrollbars; the webkit rules cover Safari, which ignores scrollbar-width */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-primary-bg-200) transparent;
+	}
+	::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: var(--color-primary-bg-200);
+		border-radius: 3px;
+	}
+
+	body {
+		color: var(--color-primary-fg-100);
+		background: var(--color-primary-bg-400);
+		min-height: 100vh;
+	}
+
+	h1 {
+		font-size: var(--text-h1);
+	}
+	h2 {
+		font-size: var(--text-h2);
+	}
+	h3 {
+		font-size: var(--text-h3);
+	}
+	h4 {
+		font-size: var(--text-h4);
+	}
+	h5 {
+		font-size: var(--text-h5);
+	}
+	h6 {
+		font-size: var(--text-h6);
+	}
+}

@@ -1,41 +1,10 @@
-import styled from 'styled-components'
-
 function SubHeading() {
 	return (
-		<Container>
+		<div className="w-[357px] ml-[11px] pt-[13px] pl-[5px] border-t-[0.5px] border-primary-fg-100 text-primary-fg-100 font-thin opacity-0 animate-fadein-delayed max-phone:w-[248px]">
 			I'm a quiet creative, motivated by learning challenging subjects and
 			helping others.
-		</Container>
+		</div>
 	)
 }
-
-const Container = styled.div`
-	width: 357px;
-	margin: 0px 0px 0px 11px;
-	padding: 13px 0px 0px 5px;
-	border-top: 0.5px solid var(--primary-fg-100);
-	color: var(--primary-fg-100);
-	font-weight: lighter;
-	opacity: 0;
-	animation-name: fadein;
-	animation-duration: 0.6s;
-	animation-timing-function: ease-out;
-	animation-fill-mode: forwards;
-	animation-delay: 0.6s;
-
-	@keyframes fadein {
-		from {
-			opacity: 0;
-		}
-
-		to {
-			opacity: 1;
-		}
-	}
-
-	@media (max-width: 495px) {
-		width: 248px;
-	}
-`
 
 export default SubHeading
